@@ -14,7 +14,7 @@ log.setLevel(logging.DEBUG)
 console.setFormatter(
     logging.Formatter(
         f"{{asctime}} [{Fore.YELLOW}{{levelname:>5}}{Fore.RESET}] {Fore.BLUE}{{name}}{Fore.RESET}: {{message}}",
-        style="{", datefmt="%W %a %I:%M"))
+        style="{", datefmt="W%W %a %I:%M"))
 
 
 def command_entry_point():
