@@ -5,7 +5,7 @@ program-name=placeholder
 
 install_dependencies:
 	python3 -m venv .venv
-	$(pip) install build hatchling twine
+	$(pip) install build hatchling twine colorama
 
 set_user:
 	cp ~/.pypirc_$(user) ~/.pypirc
