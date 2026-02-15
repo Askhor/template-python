@@ -7,14 +7,10 @@ from colorama import Fore
 __program_name__ = "placeholder"
 __version__ = "0.0.0"  # version
 
+import placeholder.mydefaults as mydefaults
+
+mydefaults.create_logger(__program_name__)
 log = logging.getLogger(__program_name__)
-console = logging.StreamHandler()
-log.addHandler(console)
-log.setLevel(logging.DEBUG)
-console.setFormatter(
-    logging.Formatter(
-        f"{{asctime}} [{Fore.YELLOW}{{levelname:>5}}{Fore.RESET}] {Fore.BLUE}{{name}}{Fore.RESET}: {{message}}",
-        style="{", datefmt="W%W %a %I:%M"))
 
 
 def command_entry_point():

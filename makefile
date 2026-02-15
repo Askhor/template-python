@@ -5,7 +5,11 @@ program-name=placeholder
 
 install_dependencies:
 	python3 -m venv .venv
-	$(pip) install build hatchling twine colorama
+	$(py) -m pip install --upgrade pip
+	$(pip) install build hatchling twine colorama pytest hypothesis
+
+test:
+	$(py) -m pytest $(args)
 
 set_user:
 	cp ~/.pypirc_$(user) ~/.pypirc
