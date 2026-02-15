@@ -11,6 +11,8 @@ log = logging.getLogger(__package__)
 
 @mydefaults.command(version="0.0.0")
 def placeholder(parser: ArgumentParser):
+    """Placeholder description"""
+
     args = parser.parse_args()
 
     log.setLevel(logging.DEBUG if args.verbose else logging.INFO)
