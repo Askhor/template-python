@@ -1,34 +1,17 @@
-import argparse
 import logging
+from argparse import ArgumentParser
 
 import colorama
+import mydefaults
 from colorama import Fore
 
-__program_name__ = "placeholder"
-__version__ = "0.0.0"  # version
-
-import placeholder.mydefaults as mydefaults
-
-mydefaults.create_logger(__program_name__)
-log = logging.getLogger(__program_name__)
+mydefaults.create_logger(__package__)
+log = logging.getLogger(__package__)
 
 
-def command_entry_point():
-    try:
-        main()
-    except KeyboardInterrupt:
-        log.warning("Program was interrupted by user")
-
-
-def main():
-    parser = argparse.ArgumentParser(prog=__program_name__,
-                                     description="Placeholder description",
-                                     allow_abbrev=True, add_help=True, exit_on_error=True)
-
-    parser.add_argument('-v', '--verbose', action='store_true', help="Show more output")
-    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
-
+@mydefaults.command(version="0.0.0")
+def placeholder(parser: ArgumentParser):
     args = parser.parse_args()
 
     log.setLevel(logging.DEBUG if args.verbose else logging.INFO)
-    log.debug(f"Starting {__program_name__}...")
+    log.debug(f"Starting {parser.prog}...")

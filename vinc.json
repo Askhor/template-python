@@ -7,8 +7,8 @@
 			"replace": "\"<VERSION>\" # version"
 		},
 		"placeholder/__init__.py": {
-			"find": "__version__\\s*=\\s*\"<VERSION>\"\\s*#\\s*version",
-			"replace": "__version__ = \"<VERSION>\"  # version"
+			"find": "version\\s*=\\s*\"<VERSION>\"",
+			"replace": "version=\"<VERSION>\""
 		}
 	}
 }

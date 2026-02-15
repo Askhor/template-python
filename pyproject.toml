@@ -24,7 +24,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent"
 ]
-dependencies = ["colorama"]
+dependencies = ["colorama", "mydefaults==1.*.*"]
 keywords = []
 
 [project.scripts]

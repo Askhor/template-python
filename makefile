@@ -6,7 +6,7 @@ program-name=placeholder
 install_dependencies:
 	python3 -m venv .venv
 	$(py) -m pip install --upgrade pip
-	$(pip) install build hatchling twine colorama pytest hypothesis
+	$(pip) install build hatchling twine colorama pytest hypothesis mydefaults mypy types-colorama
 
 test:
 	$(py) -m pytest $(args)

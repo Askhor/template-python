@@ -1,3 +1,3 @@
-from . import command_entry_point
+from . import placeholder
 
-command_entry_point()
+placeholder()
