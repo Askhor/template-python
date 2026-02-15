@@ -7,16 +7,16 @@ only-include = [
     "README.md",
     "LICENSE.txt",
     "pyproject.toml",
-    "placeholder"
+    "placeholder" # TODO
 ]
 
 [project]
-name = "placeholder"
+name = "placeholder" # TODO
 version = "0.0.0" # version
 authors = [
     { name = "Guenthner", email = "guenthner.jonathan@gmail.com" },
 ]
-description = "Placeholder description"
+description = "Placeholder description" # TODO
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -28,4 +28,4 @@ dependencies = ["colorama", "mydefaults==1.*.*"]
 keywords = []
 
 [project.scripts]
-placeholder = "placeholder:command_entry_point"
+placeholder = "placeholder:command_entry_point" # TODO

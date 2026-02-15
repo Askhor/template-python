@@ -6,7 +6,7 @@
 			"find": "\"<VERSION>\"\\s*#\\s*version",
 			"replace": "\"<VERSION>\" # version"
 		},
-		"placeholder/__init__.py": {
+		"placeholder/__init__.py": { # TODO
 			"find": "version\\s*=\\s*\"<VERSION>\"",
 			"replace": "version=\"<VERSION>\""
 		}
